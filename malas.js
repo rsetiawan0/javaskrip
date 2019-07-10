@@ -1,3 +1,33 @@
+function addClassBody() {
+    var element, name, arr;
+    element = document.body;
+    name = "flow";
+    arr = element.className.split(" ");
+    if (arr.indexOf(name) == -1) {
+        element.className += " " + name;
+    }
+}
+function removeClassBody() {
+    var element = document.body;
+    element.className = element.className.replace(/\bflow\b/g, "");
+}
+    
+var lazyaddthis = false;
+window.addEventListener("scroll", function(){
+if ((document.documentElement.scrollTop != 0 && lazyaddthis === false) || (document.body.scrollTop != 0 && lazyaddthis === false)) {
+	
+        // SIMPAN KODE JAVASCRIPT DISQUS DI BAWAH INI
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');      
+        s.src = '//'+shortname+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+lazyaddthis = true;
+  }
+}, true);
+
 function jump(h){
     var top = document.getElementById(h).offsetTop;
     window.scrollTo(0, top);
