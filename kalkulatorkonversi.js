@@ -1,7 +1,7 @@
-inpDes = document.getElementById("inp-dec");
-inpOkt = document.getElementById("inp-oct");
-inpHek = document.getElementById("inp-hex");
-inpBin = document.getElementById("inp-bin");
+inpDes = document.getElementById("inpdes");
+inpOkt = document.getElementById("inpokt");
+inpHek = document.getElementById("inphek");
+inpBin = document.getElementById("inpbin");
 
 function sikatDes() {
   input = inpDes.value;
